@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "author": "Matti Luukkainen",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js",
+    "build:ui": "rmdir /s /q dist && cd ../example && npm run build && xcopy dist ..\\example_backend /E /I"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,4 +1,4 @@
-const Entries = ({EntriesToShow}) => {
+const Entries = ({EntriesToShow, DeleteFunction}) => {
     return (
         <ul>
         {EntriesToShow.map(person => <li key={person.id}>{person.name} {person.number} 

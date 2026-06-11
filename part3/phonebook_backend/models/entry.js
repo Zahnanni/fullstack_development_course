@@ -1,13 +1,5 @@
 const mongoose = require('mongoose')
 
-
-
-//if (process.argv.length === 4) {
-//  console.log('you have either not provided a name or a number for the entry.')
-//  process.exit(1)
-//}
-
-
 const url = process.env.MONGODB_URI
 
 mongoose.set('strictQuery',false)
@@ -15,7 +7,7 @@ mongoose.set('strictQuery',false)
 console.log('connecting to', url)
 mongoose.connect(url, { family: 4 })
 
-  .then(result => {
+  .then(() => {
     console.log('connected to MongoDB')
   })
   .catch(error => {
@@ -33,7 +25,7 @@ const entrySchema = new mongoose.Schema({
     minLength: 8,
     validate: {
       validator: function(v) {
-        return /^\d{2,3}-\d+$/.test(v);
+        return /^\d{2,3}-\d+$/.test(v)
       },
       message: props => `${props.value} is not a valid phone number!`
     },

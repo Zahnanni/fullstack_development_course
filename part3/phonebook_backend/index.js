@@ -46,21 +46,21 @@ app.get('/api/persons', (request, response) => {
 
 app.get('/api/persons/:id', (request, response, next) => {
   Entry.findById(request.params.id)
-  .then(entry => {
-    if (entry) {
-      response.json(entry)
-    } else {
-      response.status(404).end()
-    }
-  })
-  .catch(error => next(error))
+    .then(entry => {
+      if (entry) {
+        response.json(entry)
+      } else {
+        response.status(404).end()
+      }
+    })
+    .catch(error => next(error))
 })
 
 
 
 app.delete('/api/persons/:id', (request, response, next) => {
   Entry.findByIdAndDelete(request.params.id)
-    .then(result => {
+    .then(() => {
       response.status(204).end()
     })
     .catch(error => next(error))
@@ -77,9 +77,9 @@ app.post('/api/persons', (request, response, next) => {
 
   entry.save()
     .then(savedEntry => {
-    response.json(savedEntry)
+      response.json(savedEntry)
     })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
 

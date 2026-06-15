@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/notes/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjZhMmZkMjkzZDVjNzJlZTJjYjAzMDY2YSIsImlhdCI6MTc4MTUyNjA5OH0.vSYAVm84hBB7Q7yoO0rHtGKAEMsM48vSYjMke5hmNAo
+
+{
+    "content": "authorisation and verification makes applications quite a bit more complicated",
+    "important": true,
+    "userId": "6a2fd293d5c72ee2cb03066a"
+}

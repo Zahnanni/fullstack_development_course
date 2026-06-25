@@ -1,0 +1,11 @@
+PUT http://localhost:3003/api/blogs/6a33dc5f54845017713b5063
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjZhMmZmN2UyOGQxNDRmYmViNDk4MDgwMCIsImlhdCI6MTc4MTc5MDE4OCwiZXhwIjoxNzgxNzkzNzg4fQ.cAGY7ajmD2ZiT5XW4NR4fkPi4thHMS6EVVrhGzeftHw
+
+{
+  "user": "6a2ff7e28d144fbeb4980800",
+  "likes": 1,
+  "author": "Michael Ambrosivic",
+  "title": "The dawn is coming",
+  "url": "the-dawn-is-coming.url"
+}
